@@ -10,8 +10,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name="cliente")
 public class ClienteModel {
+
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id")
 int id;
 
 @Column (name="name")
@@ -49,5 +50,12 @@ public int getId() {
  
  public void setEmail(String email) {
 	 this.email = email;}
+
+ public String getComment() {
+	 return comment;}
+ 
+ public void setComment(String comment) {
+	 this.comment = comment;}
+	 
 
 }
